@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+	<!-- Stylesheets	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Document Title	============================================= -->
+	<title>uCurrencies Smart-Contract</title>
+	<script charset="utf-8"
+	        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+	        type="text/javascript">
+	</script>
+</head>
+
+<body class="stretched" onload="updateDapp()">
+	<!-- Document Wrapper	============================================= -->
+	<div id="wrapper" class="clearfix">
+		<!-- Header 	============================================= -->
+		<header id="header" class="sticky-style-2">
+			<div class="container clearfix">
+				<!-- Logo	============================================= -->
+				<div id="logo">
+	        <a href="https://ucurrencies.com" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="uCurrencies Smart-Contract"></a>
+	        <a href="https://ucurrencies.com" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="uCurrencies Smart-Contract"></a>
+				</div>
+				<!-- #logo end -->
+				<ul class="header-extras">
+					<li>
+						<a href="index.html">
+						<i class="i-medium i-circled i-bordered icon-calculator nomargin"></i>
+						<div class="he-text">
+							Create
+							<span style="font-size:10px">Own Currency</span>
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="convert.html">
+						<i class="i-medium i-circled i-bordered icon-download nomargin"></i>
+						<div class="he-text">
+							Convert
+							<span style="font-size:10px">to Currency</span>
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="redeem.html">
+						<i class="i-medium i-circled i-bordered icon-undo nomargin"></i>
+						<div class="he-text">
+							Redeem
+							<span style="font-size:10px">Your UCASH</span>
+						</div>
+					</a>
+					</li>
+				</ul>
+			</div>
+			<div id="header-wrap" style="background-color:#f8f8f8;padding:15px">
+			<!-- Primary Navigation	============================================= -->
+				<nav id="primary-menu" class="style-2">
+					<div class="container clearfix">
+						<div id="primary-menu-trigger">
+							<i class="icon-th icon-2x"></i>
+						</div>
+						<ul style="font-size:12px">
+							<div id="TopLeftMetamaskLoggedIn">
+								<span id="YourAddress"></span><BR>
+								<span id="OwnedUCASH"></span>
+							</div>
+							<div id="TopLeftMetamaskLoggedOut">
+								<span id="UCASHAddressLabel"></span><br>
+		            <!--<span id="ContractAddressLabel"></span>-->
+							</div>
+						</ul>
+						<!-- Top Search	============================================= -->
+						<div style="float:left">
+							<input type="text" style="padding: 10px;font-size:8px;padding-right:133px" id="search-my-address" value="" placeholder="Search Currency Data">
+						</div>
+						<!-- #top-search end -->
+					</div>
+				</nav>
+				<!-- #primary-menu end -->
+			</div>
+		</header>
+		<!-- #header end -->
+		<div class="clear"></div>
+		<!-- Content ============================================= -->
+		<section id="content">
+      <center>
+				<div class="content-wrap nopadding">
+	        <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"></script>
+	        <script src="js/switchMetamask.js"></script>
+	        <script src="js/contractInit.js"></script>
+	        <script src="js/contractFunctions.js"></script>
+	        <script>
+					var _ethers = ethers;
+
+					 var provider = new ethers.providers.Web3Provider(web3.currentProvider,'rinkeby');
+					 initialize(_ethers,provider);
+
+
+
+	        </script>
+	        <script charset="utf-8" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js" type="text/javascript">
+
+	        </script>
+	        <script>
+            var counter = 0;
+            window.setInterval("refreshDiv()", 5000);
+            function refreshDiv(){
+              updateDapp();
+            }
+	        </script>
+
+<script>
+</script>
+
+
+
+	        <script>
+					async function updateDapp(){
+
+								ucashContract = new ethers.Contract(ucashContractAddress, ucashABI, signer);
+
+								let _address = signer._address;
+
+							 getOwnedUCASHSimple(_address);
+
+							 document.getElementById("UCASHAddressLabel").innerHTML = "";
+
+							 document.getElementById("YourAddress").innerHTML = "<B>Address: </b><a href='https://etherscan.io/address/"+_address+"'>" +_address+ "</a>";
+
+
+
+					}
+	      	</script>
+				</div>
+				<div style="padding:15px">
+				 <h2><B>Create Your Own Currency</b></h2>
+				 </center>
+
+					 <div class="col-md-12">
+						<div class="col-md-2"></div>
+					  <div class="col-md-8">
+							<div class="col-md-5" style="font-weight:700;font-size:18px;padding-top:5px;">
+									Name: <span class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="More Info" style="background-color:#cc9933">?</span>
+							</div>
+							<div class="col-md-7" style="padding-bottom:8px">
+								<input type="text" style="padding: 11px;" id="currencyName" placeholder="Eg. Universal Cash"/><BR>
+							</div>
+							<div class="col-md-5" style="font-weight:700;font-size:18px;padding-top:5px;">
+									Currency Ticker: <span class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="More Info" style="background-color:#cc9933">?</span>
+							</div>
+							<div class="col-md-7" style="padding-bottom:8px">
+								<input type="text" style="padding: 11px;" id="currencyTicker" placeholder="Eg. UCASH"/><BR>
+							</div>
+							<div class="col-md-5" style="font-weight:700;font-size:18px;padding-top:5px;">
+ 								Decimal Places:
+							</div>
+							<div class="col-md-7" style="padding-bottom:8px">
+								<input type="number" max="18" style="padding: 11px;" id="currencyDecimal" placeholder="0 to 18 Decimal Places"/><BR>
+							</div>
+							<div class="col-md-5" style="font-weight:700;font-size:18px;padding-top:5px;">
+								Peg to UCASH:
+							</div>
+							<div class="col-md-7" style="padding-bottom:8px">
+								<input type="number" style="padding: 11px;" id="currencyPeg" placeholder="How Many Of Your Currency Per UCASH"/><BR>
+							</div>
+							<div class="col-md-5" style="font-weight:700;font-size:18px;padding-top:5px;">
+								Max Amount: <span style="font-size:12px;font-weight:400;">(Optional)</span>
+							</div>
+							<div class="col-md-7" style="padding-bottom:8px">
+								<input type="number" style="padding: 11px;" id="currencyMax" placeholder="Max Supply of Your Currency in Circulation"/><BR>
+							</div>
+							<div class="col-md-12">
+								<button class="button buttton-success button-large"  data-toggle="modal" data-target=".bs-example-modal-lg">START CURRENCY CREATION</button><br><br>
+								<button class="button buttton-success button-large" onclick="createToken()"> DEPLOY NEW CURRENCY</button> <br><br>
+
+								<!-- Large modal -->
+
+								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-body">
+											<div class="modal-content">
+												<div class="modal-header">
+											<h4 class="modal-title" id="myModalLabel">Currency Creation Fee</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										</div>
+												<div class="modal-body">
+													<center>
+													<h3 style="margin-bottom:0px;"><B>Deposit 0.1 ETH to Initiate Contract</b></h3>
+															 <label>Send ETH directly to the contract address using the details below:</label><BR>
+															 <B>uCurrencies Creation Address:</b><BR>
+													<span id="ContractAddressLabel2"></span><BR><BR>
+													<img id="x" src="Ethereum_QR_code.png"height="164"><br>
+													<label>Waiting on deposit and confirmation ..... </label><BR><br>
+													<h3 style="margin-bottom:0px;"><B>Want to pay using another method?</b></h3>
+														<img id="yzx" src="visa-mastercard-paypal-logos.jpg"height="42"><br>
+														<label>Contact our concierge service for more details. </label><BR>
+
+																<button class="button buttton-success button-large" onclick="window.location.href='concierge.html'" >CONTACT CONCIERGE</button><br><br>
+
+
+												</center>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+				</div>
+			 </div>
+
+		</section>
+		<!-- #content end -->
+		<!-- Footer ============================================= -->
+		<footer id="footer" class="light">
+			<!-- Copyrights ============================================= -->
+			<div id="copyrights">
+				<div class="container clearfix">
+					<center>
+						<img src="images/footer-logo.png" alt="" class="footer-logo">
+						<div class="footerlicense">
+							© A <a href="https://ucash.network"><B>U.CASH Network</B></a> Initiative - 2019. Released under the <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a>
+						</div>
+					</center>
+				</div>
+			</div>
+			<!-- #copyrights end -->
+		</footer>
+		<!-- #footer end -->
+	</div>
+	<!-- #wrapper end -->
+	<!-- Go To Top ============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+	<!-- External JavaScripts	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- Footer Scripts ============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>
