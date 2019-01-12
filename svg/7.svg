@@ -2,19 +2,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Creator: CorelDRAW X8 -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 1050 1050"
+viewBox="0 0 840 840"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:none}
     .fil0 {fill:#848688}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <polygon class="fil0" points="422,774 255,941 107,941 107,792 588,311 107,311 107,101 798,101 844,101 947,101 947,249 632,564 527,669 422,774 "/>
-  <rect class="fil1" width="1050" height="1050"/>
+  <polygon class="fil0" points="315,673 148,840 0,840 0,691 481,210 0,210 0,0 692,0 737,0 840,0 840,149 525,464 420,569 315,674 "/>
  </g>
 </svg>

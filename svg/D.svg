@@ -2,19 +2,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Creator: CorelDRAW X8 -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 1050 1050"
+viewBox="0 0 840 840"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:none}
     .fil0 {fill:#848688}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M527 105c232,0 420,188 420,420 0,232 -188,420 -420,420l-210 0 -210 0 0 -209 0 -422 0 -209 0 0 420 0zm-210 631l210 0c116,0 210,-95 210,-211 0,-117 -94,-211 -210,-211l-210 0 0 422z"/>
-  <rect class="fil1" width="1050" height="1050"/>
+  <path class="fil0" d="M420 0c232,0 420,188 420,420 0,232 -188,420 -420,420l-210 0 -210 0 0 -209 0 -422 0 -209 0 0 420 0zm-210 631l210 0c117,0 210,-94 210,-211 0,-117 -93,-211 -210,-211l-210 0 0 422z"/>
  </g>
 </svg>
